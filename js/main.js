@@ -31,7 +31,6 @@ let biglCodiceCp = document.getElementById('ticket-codice');
 
 
 // Eventi Click Genera
-// Eventi Click Genera
 formGenera.addEventListener('click',
   function() {
     // Calcolo costo biglietto intero
