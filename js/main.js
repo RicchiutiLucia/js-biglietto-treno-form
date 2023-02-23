@@ -55,4 +55,21 @@ formGenera.addEventListener('click', function(){
      biglCodiceCp.innerHTML = codiceCp; //N° codice CP
 })
 
+// Eventi Click Genera
+formAnnulla.addEventListener('click',
+  function() {
+    // Reset valori form
+    formNome.value = '';
+    formKm.value = '';
+    formEta.value = 'mag';
+
+    // Reset valori biglietto
+    biglNome.innerHTML = '';
+    biglCosto.innerHTML = '';
+
+    // Hide ticket
+    let ticketPrev = document.getElementById('ticket-preview');
+    ticketPrev.className = 'hidden';
+  }
+)
 
