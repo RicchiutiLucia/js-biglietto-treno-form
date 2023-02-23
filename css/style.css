@@ -6,9 +6,11 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #b91750;
 }
 
 .text-title {
+  color: white;
   text-align: center;
   padding: 15px;
 }
@@ -47,4 +49,26 @@ body {
   padding: 5px 10px;
   font-weight: bold;
   margin: 50px 0;
+}
+#info-ticket {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.ticket-details {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 2px dashed gray;
+  height: 200px;
+}
+.ticket-details > div {
+  font-weight: bold;
+}
+.pass-id {
+  background-color: gray;
 }
