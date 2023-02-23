@@ -29,6 +29,7 @@ let biglOfferta = document.getElementById('ticket-offerta');
 let biglCarrozza = document.getElementById('ticket-carrozza');
 let biglCodiceCp = document.getElementById('ticket-codice');
 
+
 // Eventi Click Genera
 formGenera.addEventListener('click', function(){
     let prezzo = formKm.value * 0.21;
@@ -55,7 +56,7 @@ formGenera.addEventListener('click', function(){
      biglCodiceCp.innerHTML = codiceCp; //N° codice CP
 })
 
-// Eventi Click Genera
+// Eventi Click Annulla
 formAnnulla.addEventListener('click',
   function() {
     // Reset valori form
@@ -70,6 +71,9 @@ formAnnulla.addEventListener('click',
     // Hide ticket
     let ticketPrev = document.getElementById('ticket-preview');
     ticketPrev.className = 'hidden';
+
   }
 )
+
+
 

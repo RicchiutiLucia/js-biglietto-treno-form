@@ -72,3 +72,31 @@ body {
 .pass-id {
   background-color: gray;
 }
+#ticket-nome{
+  background-color: white;
+}
+
+.print .cta {
+  color: #b91750;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin: 50px 0;
+}
+.print {
+  text-align: center;
+}
+.print img {
+  width: 80px;
+  vertical-align: middle;
+  margin-left: 20px;
+
+}
+.print  h3{
+  color: white;
+  padding-bottom: 20px;
+}
+
+
+
+
