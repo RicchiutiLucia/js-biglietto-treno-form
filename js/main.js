@@ -31,31 +31,34 @@ let biglCodiceCp = document.getElementById('ticket-codice');
 
 
 // Eventi Click Genera
-formGenera.addEventListener('click', function(){
+// Eventi Click Genera
+formGenera.addEventListener('click',
+  function() {
+    // Calcolo costo biglietto intero
     let prezzo = formKm.value * 0.21;
     offerta = 'Prezzo standard';
     console.log(prezzo);
 
+    // Calcolo eventuali sconti
     if (formEta.value == 'min') {
-        prezzo = (prezzo- (prezzo * 0.2));
-        let offerta = 'Sconto minorenni';
-    }else if (formEta.value == 'over') {
-        prezzo = (prezzo - (prezzo * 0.4));
+      prezzo = prezzo - ( prezzo * 20 / 100);
+      offerta = 'Sconto minorenni';
+    } else if (formEta.value == 'over') {
+      prezzo = prezzo - ( prezzo * 40 / 100);
+      offerta = 'Sconto over 65';
     }
-
     // Genera n° Carrozza
     let carrozza = Math.floor(Math.random() * 10) + 1;
     // Genera CodiceCP
     let codiceCp = Math.floor(Math.random() * 1000) + 1;
-
-     // Genera contenuto biglietto
-     biglNome.innerHTML = formNome.value; //Nome passeggero
-     biglCosto.innerHTML = prezzo.toFixed(2) + ' Euro'; //Costo biglietto
-     biglOfferta.innerHTML = offerta; //Tipologia offerta
-     biglCarrozza.innerHTML = carrozza; //N° carrozza
-     biglCodiceCp.innerHTML = codiceCp; //N° codice CP
-})
-
+    // Genera contenuto biglietto
+    biglNome.innerHTML = formNome.value; //Nome passeggero
+    biglCosto.innerHTML = prezzo.toFixed(2) + ' Euro'; //Costo biglietto
+    biglOfferta.innerHTML = offerta; //Tipologia offerta
+    biglCarrozza.innerHTML = carrozza; //N° carrozza
+    biglCodiceCp.innerHTML = codiceCp; //N° codice CP
+  }
+)
 // Eventi Click Annulla
 formAnnulla.addEventListener('click',
   function() {
