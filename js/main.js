@@ -10,3 +10,37 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 MILESTONE 2:
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 Il recap dei dati e l’output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). */
+
+
+//Elementi del form
+let formNome= document.querySelector('#form-nome');
+let formKm= document.querySelector('#form-tratta');
+let formEta= document.querySelector('#form-eta');
+let prezzo = formKm.value * 0.21;
+
+// Elementi buttons
+let formGenera = document.getElementById('form-genera');
+let formAnnulla = document.getElementById('form-annulla');
+
+// Eventi Click Genera
+formGenera.addEventListener('click', function(){
+     if (formEta.value == 'min') {
+        prezzo = (prezzo- (prezzo * 0.2)).toFixed(2)
+        let offerta = 'Sconto minorenni';
+    }
+    else if (formEta.value == 'over') {
+        prezzo = (prezzo - (prezzo * 0.4)).toFixed(2)
+    }
+    else {
+     let prezzo = formKm.value * 0.21;
+     let offerta = 'Prezzo standard';
+     console.log(prezzo);
+    }
+
+    // Genera n° Carrozza
+    let carrozza = Math.floor(Math.random() * 10) + 1;
+    // Genera CodiceCP
+    let codiceCp = Math.floor(Math.random() * 1000) + 1;
+})
+
+

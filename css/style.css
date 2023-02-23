@@ -4,6 +4,47 @@
     box-sizing: border-box;
   }
 
-  body {
-    font-family: 'Open Sans', sans-serif;
-  }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text-title {
+  text-align: center;
+  padding: 15px;
+}
+.form {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.form.form-anagrafica {
+  height: 200px;
+  text-align: center;
+}
+.form .form-data {
+  display: inline-block;
+}
+.form label {
+  color: #b91750;
+}
+.form input, select {
+  padding: 3px;
+  border-color: #c53f6e;
+  border-radius: 5px;
+}
+.form input:focus, .form select:focus {
+  background-color: #b91750;
+  color: white;
+}
+.form .form-data.km {
+  margin: 0 50px;
+}
+.form .cta{
+  color: #b91750;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin: 50px 0;
+}
