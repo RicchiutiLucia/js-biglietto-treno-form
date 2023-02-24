@@ -22,7 +22,10 @@ let prezzo = formKm.value * 0.21;
 let formGenera = document.getElementById('form-genera');
 let formAnnulla = document.getElementById('form-annulla');
 
+
+
 // Elementi Biglietto
+let ticketPreview = document.getElementById('ticket-preview');
 let biglNome = document.getElementById('ticket-nome');
 let biglCosto = document.getElementById('ticket-costo');
 let biglOfferta = document.getElementById('ticket-offerta');
@@ -46,6 +49,8 @@ formGenera.addEventListener('click',
       prezzo = prezzo - ( prezzo * 40 / 100);
       offerta = 'Sconto over 65';
     }
+
+    ticketPreview.classList.remove('hidden');
     // Genera n° Carrozza
     let carrozza = Math.floor(Math.random() * 10) + 1;
     // Genera CodiceCP
@@ -73,7 +78,6 @@ formAnnulla.addEventListener('click',
     // Hide ticket
     let ticketPrev = document.getElementById('ticket-preview');
     ticketPrev.className = 'hidden';
-
   }
 )
 
